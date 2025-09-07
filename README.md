@@ -6,7 +6,7 @@ This project is a fully functional 8-bit CPU built from a combination of 74LS-se
 ## 📖 Documentation
 - [Full Project Report (PDF)] [8-bit CPU documentation (final) (PDF)](8-bit%20CPU%20documentation.pdf)
 - [Block Diagram](docs/8-bit%20CPU%20block%20diagram.png)  
-- [Complete Schematic](docs/complete-schematic.png)
+- [Complete Schematic](docs/complete%20schematic.png)
 - [All Individual Schematics (PDF)](docs/All%20Schematics.pdf)
 
 ## 🔧 System Features
