@@ -1,0 +1,56 @@
+(kicad_sch
+	(version 20250114)
+	(generator "eeschema")
+	(generator_version "9.0")
+	(uuid "252495b4-58c5-405e-aafc-5f8477f46e1b")
+	(paper "A4")
+	(lib_symbols)
+	(sheet
+		(at 260.35 100.33)
+		(size 12.7 3.81)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "aaaf3804-99ef-465f-b371-696a8a20eb5f")
+		(property "Sheetname" "Untitled Sheet"
+			(at 260.35 99.6184 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "../CPU control logic/CPU control logic.kicad_sch"
+			(at 260.35 104.7246 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "ControlLogic_Board"
+				(path "/252495b4-58c5-405e-aafc-5f8477f46e1b"
+					(page "2")
+				)
+			)
+		)
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+	(embedded_fonts no)
+)
