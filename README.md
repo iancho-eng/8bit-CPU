@@ -268,7 +268,7 @@ HLT       ; Halt
 - [x] Arduino Nano EEPROM programmer built and tested
 - [x] Decoupling/bypass capacitors added throughout
 - [x] PCB layout routing complete for all 8 modules
-- [ ] PCB prototype fabrication & testing
+- [x] PCB prototype fabrication & testing
 - [ ] Full-system bring-up on fabricated boards
 
 ---
