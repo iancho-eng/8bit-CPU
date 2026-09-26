@@ -5,16 +5,16 @@ A fully functional 8-bit CPU designed in KiCAD and prototyped on breadboards, bu
 > Inspired by Ben Eater's 8-bit computer series, this implementation extends the original design with custom modifications in components, organization, and debugging instrumentation.
 
 <p align="center">
-  <img src="docs/images/Control-Logic-3D.png" width="23%">
-  <img src="docs/images/alu-3d.png" width="23%">
-  <img src="docs/images/ram-3d.png" width="23%">
-  <img src="docs/images/pc-output-3d.png" width="23%">
+  <img src="docs/images/Control Logic PCB 3D.png" width="23%">
+  <img src="docs/images/ALU PCB 3D.png" width="23%">
+  <img src="docs/images/RAM PCB 3D.png" width="23%">
+  <img src="docs/images/PC + Output Register PCB 3D.png" width="23%">
 </p>
 <p align="center">
-  <img src="docs/images/register-a-3d.png" width="23%">
-  <img src="docs/images/register-b-3d.png" width="23%">
-  <img src="docs/images/mar-ir-3d.png" width="23%">
-  <img src="docs/images/clock-3d.png" width="23%">
+  <img src="docs/images/Register A PCB 3D.png" width="23%">
+  <img src="docs/images/Register B PCB 3D.png" width="23%">
+  <img src="docs/images/MAR + IR PCB 3D.png" width="23%">
+  <img src="docs/images/Clock PCB 3D.png" width="23%">
 </p>
 
 ---
@@ -81,64 +81,64 @@ Every module of the CPU has been fully migrated from breadboard schematic to a r
 
 ### Register A
 <p align="center">
-  <img src="docs/images/register-a-3d.png" width="48%">
-  <img src="docs/images/register-a-layout.png" width="48%">
+  <img src="docs/images/Register A PCB 3D.png" width="48%">
+  <img src="docs/images/Register A PCB Layout.png" width="48%">
 </p>
 
 8-bit accumulator register (`pcb/Register_A/Register_A.kicad_pcb`) — dual 74HCT173 D-type registers cascaded for 8 bits, bus-isolated via 74HCT245 transceiver, with LED taps on every output bit.
 
 ### Register B
 <p align="center">
-  <img src="docs/images/register-b-3d.png" width="48%">
-  <img src="docs/images/register-b-layout.png" width="48%">
+  <img src="docs/images/Register B PCB 3D.png" width="48%">
+  <img src="docs/images/Register B PCB Layout.png" width="48%">
 </p>
 
 8-bit operand register (`pcb/Register_B/Register_B.kicad_pcb`) — same 74HCT173 + 74HCT245 architecture as Register A.
 
 ### ALU
 <p align="center">
-  <img src="docs/images/alu-3d.png" width="48%">
-  <img src="docs/images/alu-layout.png" width="48%">
+  <img src="docs/images/ALU PCB 3D.png" width="48%">
+  <img src="docs/images/ALU PCB Layout.png" width="48%">
 </p>
 
 Dual 74LS283 4-bit adders (`pcb/ALU/ALU.kicad_pcb`) cascaded for 8-bit arithmetic, with a 74LS86 XOR network for two's-complement subtraction and 74LS02/74LS08 gating for the carry/zero flag logic.
 
 ### RAM
 <p align="center">
-  <img src="docs/images/ram-3d.png" width="48%">
-  <img src="docs/images/ram-layout.png" width="48%">
+  <img src="docs/images/RAM PCB 3D.png" width="48%">
+  <img src="docs/images/RAM PCB Layout.png" width="48%">
 </p>
 
 128-byte static RAM (`pcb/RAM/RAM.kicad_pcb`) — dual 74189 RAM chips, 74LS157 address/data muxing, 74LS04 inversion correction, and an 8-position DIP switch bank for manual Program Mode entry.
 
 ### MAR + Instruction Register
 <p align="center">
-  <img src="docs/images/mar-ir-3d.png" width="48%">
-  <img src="docs/images/mar-ir-layout.png" width="48%">
+  <img src="docs/images/MAR + IR PCB 3D.png" width="48%">
+  <img src="docs/images/MAR + Instruction Register PCB Layout.png" width="48%">
 </p>
 
 Memory Address Register and Instruction Register combined on one board (`pcb/MAR_Instruction_Register/MAR_Instruction_Register.kicad_pcb`) — dual 74HCT173 registers with manual DIP-switch address entry; the IR splits into opcode (upper nibble, to control logic) and operand (lower nibble, to bus).
 
 ### Program Counter + Output Register
 <p align="center">
-  <img src="docs/images/pc-output-3d.png" width="48%">
-  <img src="docs/images/pc-output-layout.png" width="48%">
+  <img src="docs/images/PC + Output Register PCB 3D.png" width="48%">
+  <img src="docs/images/PC + Output Register PCB Layout.png" width="48%">
 </p>
 
 Combined PC and display output board (`pcb/Program_Counter_Output_Register/Program_Counter_Output_Register.kicad_pcb`) — 74HCT161 program counter, 74HCT273 output latch, EEPROM-based binary-to-7-segment lookup table, and 74LS76/74LS08 digit-multiplexing driving a 4-digit CA56-12CGWA display.
 
 ### Control Logic
 <p align="center">
-  <img src="docs/images/control-logic-3d.png" width="48%">
-  <img src="docs/images/control-logic-layout.png" width="48%">
+  <img src="docs/images/Control Logic PCB 3D.png" width="48%">
+  <img src="docs/images/Control Logic PCB Layout.png" width="48%">
 </p>
 
 Microcode sequencer (`pcb/Control_Logic/Control_Logic.kicad_pcb`) — dual 28C16 EEPROMs storing `(opcode + step + flags) → control signals`, a 74HCT161 step counter, and LED taps on every control line.
 
 ### Clock
 <p align="center">
-  <img src="docs/images/clock-3d.png" width="48%">
-  <img src="docs/images/clock-layout.png" width="48%">
+  <img src="docs/images/Clock PCB 3D.png" width="48%">
+  <img src="docs/images/Clock PCB Layout.png" width="48%">
 </p>
 
 Clock generator (`pcb/Clock/Clock.kicad_pcb`) — triple 555 timer setup (astable for continuous clocking, monostable for debounced single-step), trimmer-potentiometer frequency control, and a run/step mode switch.
