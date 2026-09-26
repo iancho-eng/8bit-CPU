@@ -5,7 +5,7 @@ A fully functional 8-bit CPU designed in KiCAD and prototyped on breadboards, bu
 > Inspired by Ben Eater's 8-bit computer series, this implementation extends the original design with custom modifications in components, organization, and debugging instrumentation.
 
 <p align="center">
-  <img src="docs/images/control-logic-3d.png" width="23%">
+  <img src="docs/images/Control Logic 3D.png" width="23%">
   <img src="docs/images/alu-3d.png" width="23%">
   <img src="docs/images/ram-3d.png" width="23%">
   <img src="docs/images/pc-output-3d.png" width="23%">
